@@ -6,8 +6,10 @@ Con notas:
 80-S
 95-S
 
-Promedio - 66,250000
+Promedio - 66,25
 Número de notas arriba del promedio: 3
+
+Nota baja: 10
 
 
 Nombres: Jonathan
@@ -18,8 +20,10 @@ Con notas:
 80-S
 45-MB
 
-Promedio - 61,250000
+Promedio - 61,25
 Número de notas arriba del promedio: 2
+
+Nota baja: 40
 
 
 Nombres: Kristen
@@ -30,8 +34,10 @@ Con notas:
 20-M
 55-S
 
-Promedio - 41,250000
+Promedio - 41,25
 Número de notas arriba del promedio: 1
+
+Nota baja: 10
 
 
 Nombres: Robin
@@ -42,8 +48,10 @@ Con notas:
 20-M
 65-S
 
-Promedio - 46,250000
+Promedio - 46,25
 Número de notas arriba del promedio: 2
+
+Nota baja: 20
 
 
 Nombres: Michelle
@@ -54,8 +62,10 @@ Con notas:
 70-S
 75-S
 
-Promedio - 63,750000
+Promedio - 63,75
 Número de notas arriba del promedio: 3
+
+Nota baja: 50
 
 
 Nombres: Emily
@@ -66,8 +76,10 @@ Con notas:
 30-MB
 85-S
 
-Promedio - 58,750000
+Promedio - 58,75
 Número de notas arriba del promedio: 2
+
+Nota baja: 30
 
 
 Nombres: Noah
@@ -78,8 +90,10 @@ Con notas:
 40-MB
 45-MB
 
-Promedio - 51,250000
+Promedio - 51,25
 Número de notas arriba del promedio: 1
+
+Nota baja: 40
 
 
 Nombres: Daniel
@@ -90,8 +104,10 @@ Con notas:
 50-MB
 95-S
 
-Promedio - 66,250000
+Promedio - 66,25
 Número de notas arriba del promedio: 2
+
+Nota baja: 30
 
 
 
