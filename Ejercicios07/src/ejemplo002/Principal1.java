@@ -45,18 +45,16 @@ public class Principal1 {
         CrearArchivoTexto.agregarRegistros(mensajeFinal);
     }
 
-    public static String presentarReporte(String nom, String ap, String notas, double prom, int numeroNotas, int notaBaja) {
-        String reporte;
-        reporte = String.format("Nombres: %s\n"
+    public static String presentarReporte(String nom, String ap, String notas, double prom, int numeroNotas, int notaBaja, int notaAlta) {
+        return String.format("Nombres: %s\n"
                 + "Apellidos: %s\n"
                 + "Con notas: \n"
                 + "%s\n"
                 + "Promedio - %.2f\n"
-                + "Número de notas arriba del promedio: %d\n\n"
-                + "Nota baja: %d\n\n",
-                nom, ap, notas, prom, numeroNotas, notaBaja);
-
-        return reporte;
+                + "Número de notas arriba del promedio: %d\n"
+                + "Nota baja: %d\n"
+                + "Nota alta: %d\n\n",
+                nom, ap, notas, prom, numeroNotas, notaBaja, notaAlta);
     }
 
     public static int promedioBajo(int[] notas) {
@@ -71,8 +69,8 @@ public class Principal1 {
 
     public static int promedio(int[] notas) {
         int notaAlta = notas[0];
-        for (int i = 1; i > notas.length; i++) {
-            if (notas[i] < notaAlta) {
+        for (int i = 1; i < notas.length; i++) {
+            if (notas[i] > notaAlta) {
                 notaAlta = notas[i];
             }
         }
@@ -96,49 +94,33 @@ public class Principal1 {
 
     public static double funcion01(int[] notas) {
         int suma = 0;
-        double promedio;
-        for (int i = 0; i < notas.length; i++) {
-            suma = suma + notas[i];
+        for (int nota : notas) {
+            suma += nota;
         }
-        promedio = (double) suma / notas.length;
-        return promedio;
+        return (double) suma / notas.length;
     }
 
     public static int funcion02(int[] notas, double promedio) {
-
         int contador = 0;
-        int nota;
-        for (int i = 0; i < notas.length; i++) {
-            nota = notas[i];
+        for (int nota : notas) {
             if (nota > promedio) {
-                contador = contador + 1;
+                contador++;
             }
-
         }
-
         return contador;
     }
 
     public static String funcion03(int[] notas) {
-        String cadena = "";
-
-        int nota;
-        for (int i = 0; i < notas.length; i++) {
-            nota = notas[i];
+        StringBuilder cadena = new StringBuilder();
+        for (int nota : notas) {
             if (nota >= 0 && nota <= 20) {
-                cadena = String.format("%s%d-%s\n", cadena, nota, "M");
+                cadena.append(nota).append("-M\n");
+            } else if (nota > 20 && nota <= 50) {
+                cadena.append(nota).append("-MB\n");
             } else {
-                if (nota > 20 && nota <= 50) {
-                    cadena = String.format("%s%d-%s\n", cadena, nota, "MB");
-                } else {
-                    if (nota > 50) {
-                        cadena = String.format("%s%d-%s\n", cadena, nota, "S");
-                    }
-                }
+                cadena.append(nota).append("-S\n");
             }
-
         }
-
-        return cadena;
+        return cadena.toString();
     }
 }
